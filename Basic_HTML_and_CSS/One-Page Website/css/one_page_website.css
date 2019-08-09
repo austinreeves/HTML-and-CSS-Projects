@@ -1,0 +1,11 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.join {
+    width: 13em;
+    margin: 0 auto;
+    border: 2px solid bisque;
+    border-radius: 8px;
+}
