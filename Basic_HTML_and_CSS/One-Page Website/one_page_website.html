@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Pembroke Welsh Corgi Club</title>
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="./JS/one_page_website.js"></script>
 	</head>
 	<body>
 	
@@ -36,57 +37,74 @@
 				<h1>Gallery</h1>
 				<div>
 				
-					<!--PHOTO CONTAINER 1-->
-					<div>
-						<div>
-							<img src="./images/corgi_1.png" alt="Sneaky Corgi Butt">
-							<div>
-								<p>
-									The Elusive Corgi Butt
-								</p>
-							</div>
+				<!-- Images used to open the lightbox -->
+				<div class="row">
+					<div class="column">
+						<img src="./images/corgi_1.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+					</div>
+					<div class="column">
+						<img src="" onclick="openModal();currentSlide(2)" class="hover-shadow">
+					</div>
+					<div class="column">
+						<img src="" onclick="openModal();currentSlide(3)" class="hover-shadow">
+					</div>
+					<div class="column">
+						<img src="" onclick="openModal();currentSlide(4)" class="hover-shadow">
+					</div>
+				</div>
+
+				<!-- The Modal/Lightbox -->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+
+						<div class="mySlides">	
+							<div class="numbertext">1 / 4</div>
+							<img src="./images/corgi_1.png" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">2 / 4</div>
+							<img src="./images/corgi_2.png" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">3 / 4</div>
+							<img src="./images/corgi_3.png" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">4 / 4</div>
+							<img src="./images/corgi_4.png" style="width:100%">
+						</div>
+
+						<!-- Next/previous controls -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						<!-- Caption text -->
+						<div class="caption-container">
+							<p id="caption"></p>
+						</div>
+
+						<!-- Thumbnail image controls -->
+						<div class="column">
+							<img class="demo" src="./images/corgi_1.png" onclick="currentSlide(1)" alt="">
+						</div>
+
+						<div class="column">
+							<img class="demo" src="./images/corgi_2.png" onclick="currentSlide(2)" alt="">
+						</div>
+
+						<div class="column">
+							<img class="demo" src="./images/corgi_3.png" onclick="currentSlide(3)" alt="">
+						</div>
+
+						<div class="column">
+							<img class="demo" src="./images/corgi_4.png" onclick="currentSlide(4)" alt="">
 						</div>
 					</div>
-					<!--END PHOTO CONTAINER 1-->
-					
-					<!--PHOTO CONTAINER 2-->
-					<div>
-						<div>
-							<img src="./images/corgi_2.png" alt="Corgi Butt">
-							<div>
-								<p>
-									Look Back At It
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 2-->
-					
-					<!--PHOTO CONTAINER 3-->
-					<div>
-						<div>
-							<img src="./images/corgi_3.png" alt="Pj's">
-							<div>
-								<p>
-									Corgi Pj's
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 3-->
-					
-					<!--PHOTO CONTAINER 4-->
-					<div>
-						<div>
-							<img src="./images/corgi_4.png" alt="Fluffy Puppy">
-							<div>
-								<p>
-									Puppy Fluff
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 4-->
+				</div>
 					
 					<!--VIDEO CONTAINER-->
 					<div id="video">
@@ -141,7 +159,6 @@
 			www.corgibutts.corgi &nbsp;|&nbsp; &copy; 2019
 		</div>
 		<!--END FOOTER-->
-		
 	</body>
 </html>
 							
